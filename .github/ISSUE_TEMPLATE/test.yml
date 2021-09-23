@@ -16,7 +16,7 @@ body:
         - Azure
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: file-paths
     attributes:
       label: File pathes
@@ -36,7 +36,7 @@ body:
         - zip
     validations:
       required: true
-- type: checkboxes
+  - type: checkboxes
     id: gzipped
     attributes:
       label: Gzip
