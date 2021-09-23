@@ -1,0 +1,45 @@
+name: CSP upload request
+description: Upload files to a cloud service provider such as S3
+title: "[CSP-UR]: "
+labels: ["* - Request", "? - Needs Triage"]
+assignees:
+  - raydouglass
+body:
+  - type: dropdown
+    id: csp
+    attributes:
+      label: Which CSP?
+      description: Which CSP should the data be uploaded to?
+      options:
+        - AWS S3
+        - GCP
+        - Azure
+    validations:
+      required: true
+- type: textarea
+    id: file-paths
+    attributes:
+      label: File pathes
+      description: List the files to be uploaded
+      placeholder: /datasets/
+      value: ""
+    validations:
+      required: true
+  - type: dropdown
+    id: combined
+    attributes:
+      label: Combine files?
+      description: Should the files listed above be combined
+      options:
+        - No
+        - tar
+        - zip
+    validations:
+      required: true
+- type: checkboxes
+    id: gzipped
+    attributes:
+      label: Gzip
+      description: Should the files be gzipped?
+      options:
+        - required: false
