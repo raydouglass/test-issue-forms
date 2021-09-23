@@ -22,7 +22,7 @@ body:
       label: File pathes
       description: List the files to be uploaded
       placeholder: /datasets/
-      value: ""
+      value: "/datasets/"
     validations:
       required: true
   - type: dropdown
@@ -42,4 +42,5 @@ body:
       label: Gzip
       description: Should the files be gzipped?
       options:
-        - required: false
+        - label: Gzip
+          required: false
